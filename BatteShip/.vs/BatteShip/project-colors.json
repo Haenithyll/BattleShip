@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "95934951-d52e-4a8d-b4ac-58e2bb2b53cb": {
+      "ProjectGuid": "95934951-d52e-4a8d-b4ac-58e2bb2b53cb",
+      "DisplayName": "BatteShip",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,1 @@
+E:\BattleShip Romain\BatteShip\BatteShip\BatteShip.csproj;x86
