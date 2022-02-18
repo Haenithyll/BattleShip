@@ -12,11 +12,12 @@
 ### Objectifs secondaires
 - Mettre en place un système de bonus rajoutant des éléments de gameplay au jeu.
 - Mettre en place une IA à difficulté modulable (facile, moyen, dur)
+- Mettre en place un système de 'Drag and Drop' permettant au joueur de positionner ses bateaux
 - Mettre en place un mode multijoueur 
 
 ## Avancée actuelle (18/02/2022) :
 - Un menu a été mis en place et permet au joueur de lancer une partie ou quitter le jeu
-- Une grille est générée au lancement de la partie => voir pour faire une première ohase de sélection des coordonnées des navires alliés puis la partie commence contre l'IA
+- Une grille est générée au lancement de la partie => voir pour faire une première phase de sélection des coordonnées des navires alliés puis la partie commence contre l'IA
 
 ## Commentaires :
 - La prise en main de WPF a été plus compliquée qu'initialement attendu. Le style d'intéraction étant différent de celui du logiciel de développement Unity, il a fallu un temps d'adaptation et beaucoup de recherche afin de maîtriser les différents éléments, surtout graphiques, comme les Grid.
