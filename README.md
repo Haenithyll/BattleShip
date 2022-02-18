@@ -20,5 +20,5 @@
 - Une grille est générée au lancement de la partie => voir pour faire une première phase de sélection des coordonnées des navires alliés puis la partie commence contre l'IA
 
 ## Commentaires :
-- La prise en main de WPF a été plus compliquée qu'initialement attendu. Le style d'intéraction étant différent de celui du logiciel de développement Unity, il a fallu un temps d'adaptation et beaucoup de recherche afin de maîtriser les différents éléments, surtout graphiques, comme les Grid.
+- La prise en main de WPF a été plus compliquée qu'initialement attendu. Le style d'intéraction étant différent de celui du logiciel de développement Unity, il a fallu un temps d'adaptation et beaucoup de recherches afin de maîtriser les différents éléments, surtout graphiques, comme les Grid.
 - Nous avons pris le temps de soigner nos différentes classes afin de rendre le tout très dynamique et laissant une liberté non négligeable à des modifications pouvant être apportées par un Game Designer (Emplacement des différents éléments de l'UI, taille de la grille, nombre de lignes, colonnes, nombres et types de navires...)
