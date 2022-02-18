@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>fece2943-322b-423b-a892-a263ed926c83</PackageIdentityName>
     <PackageIdentityPublisher>CN=paul</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\Github\BattleShip\BatteShip\EbaucheBN\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\EbaucheBN.exe">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\EbaucheBN.exe">
       <PackagePath>entrypoint\EbaucheBN.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,61 +34,67 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Visuals\Ocean_BackGround.jpg">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Visuals\Ocean_BackGround.jpg">
       <PackagePath>Visuals\Ocean_BackGround.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Visuals\Background.jpg">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Visuals\Background.jpg">
       <PackagePath>Visuals\Background.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Visuals\cell.PNG">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Visuals\Title.jpg">
+      <PackagePath>Visuals\Title.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Visuals\cell.PNG">
       <PackagePath>Visuals\cell.PNG</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Visuals\Title.png">
+      <PackagePath>Visuals\Title.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\EbaucheBN.xr.xml">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\EbaucheBN.xr.xml">
       <PackagePath>EbaucheBN.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul\source\repos\EbaucheBN\EbaucheBN\bin\x86\Debug\Core\EbaucheBN.exe">
+    <AppxPackagedFile Include="E:\Github\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\Core\EbaucheBN.exe">
       <PackagePath>EbaucheBN.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

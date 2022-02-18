@@ -8153,11 +8153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paul\\source\\repos\\EbaucheBN\\EbaucheBN\\EbaucheBN.csproj",
+      "projectUniqueName": "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
       "projectName": "EbaucheBN",
-      "projectPath": "C:\\Users\\paul\\source\\repos\\EbaucheBN\\EbaucheBN\\EbaucheBN.csproj",
+      "projectPath": "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
       "packagesPath": "C:\\Users\\paul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paul\\source\\repos\\EbaucheBN\\EbaucheBN\\obj\\",
+      "outputPath": "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8166,12 +8166,14 @@
       ],
       "configFilePaths": [
         "C:\\Users\\paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.17763"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

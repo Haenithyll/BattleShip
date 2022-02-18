@@ -5,11 +5,18 @@
     xmlns:local="using:EbaucheBN"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="SlateBlue">
-    
+    mc:Ignorable="d">
 
 
+    <Canvas x:ConnectionId='2' Name="myCanvas">
+        <Image Source="Visuals/Title.png" Canvas.Left="683" Height="208" Width="555" Canvas.Top="-84"/>
+        <TextBlock x:ConnectionId='3' Name ="Credits" Text="This game was designed by Paul Snauwaert and Romain Verhaeghe" FontSize="32" FontFamily="Vijaya" Canvas.Left="609" Canvas.Top="152"/>
+        <Grid x:ConnectionId='4' Name="MenuUI" Height="297" Width="357" Canvas.Left="782" Canvas.Top="477"/>
+        <Grid x:ConnectionId='5' Name="myGrid" Height="700" Width="700" Canvas.Left="90" Canvas.Top="190"/>
+        <Canvas.Background>
+            <ImageBrush ImageSource="Visuals/Ocean_BackGround.jpg" Stretch="UniformToFill"/>
+        </Canvas.Background>
+    </Canvas>
 </Page>
     
     
