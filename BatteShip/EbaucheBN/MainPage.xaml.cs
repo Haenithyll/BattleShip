@@ -12,10 +12,13 @@ namespace EbaucheBN
     public sealed partial class MainPage : Page
     {
         public static MainPage Instance;
+        public BattleShipGrid AllyBattleShipGrid = new BattleShipGrid();
+        public BattleShipGrid EnemyBattleShipGrid = new BattleShipGrid();
 
-        BattleShipGrid newBSgrid = new BattleShipGrid();
         GridManager myGridManager = new GridManager();
         MenuManager myMenuManager = new MenuManager();
+
+        public bool GameStarted = false;
 
         public MainPage()
         {
@@ -25,12 +28,17 @@ namespace EbaucheBN
             myMenuManager.Initialize(MenuUI);
         }
 
-        public void GridInitialization()
+        public void GridInitialization(BattleShipGrid BSGridToInitialize, bool Ally)
         {
-            newBSgrid.initGrid();
+            BSGridToInitialize.initGrid(Ally);
 
-            myGridManager.Setup(myGrid, newBSgrid);
-            myGridManager.SetSize(myGrid);
+            myGridManager.Setup(Ally ? allyGrid : enemyGrid, BSGridToInitialize);
+            myGridManager.SetSize(Ally ? allyGrid : enemyGrid);
+        }
+
+        public void Click()
+        {
+
         }
     }
 

@@ -10,9 +10,10 @@
 
     <Canvas Name="myCanvas">
         <Image Source="Visuals/Title.png" Canvas.Left="683" Height="208" Width="555" Canvas.Top="-84"/>
-        <TextBlock Name ="Credits" Text="This game was designed by Paul Snauwaert and Romain Verhaeghe" FontSize="32" FontFamily="Vijaya" Canvas.Left="609" Canvas.Top="152"/>
+        <TextBlock Name ="Credits" Text="This game was designed by Paul Snauwaert and Romain Verhaeghe" Foreground="White" FontSize="32" FontFamily="Vijaya" Canvas.Left="609" Canvas.Top="152"/>
         <Grid Name="MenuUI" Height="297" Width="357" Canvas.Left="782" Canvas.Top="477"/>
-        <Grid Name="myGrid" Height="700" Width="700" Canvas.Left="90" Canvas.Top="190"/>
+        <Grid Name="allyGrid" Height="700" Width="700" Canvas.Left="90" Canvas.Top="190"/>
+        <Grid Name="enemyGrid" Height="700" Width="700" Canvas.Left="1102" Canvas.Top="190"/>
         <Canvas.Background>
             <ImageBrush ImageSource="Visuals/Ocean_BackGround.jpg" Stretch="UniformToFill"/>
         </Canvas.Background>

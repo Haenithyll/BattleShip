@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj": {}
+    "C:\\Users\\paul_\\Documents\\GitHub\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj": {}
   },
   "projects": {
-    "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj": {
+    "C:\\Users\\paul_\\Documents\\GitHub\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
+        "projectUniqueName": "C:\\Users\\paul_\\Documents\\GitHub\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
         "projectName": "EbaucheBN",
-        "projectPath": "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
-        "packagesPath": "C:\\Users\\paul\\.nuget\\packages\\",
-        "outputPath": "E:\\Github\\BattleShip\\BatteShip\\EbaucheBN\\obj\\",
+        "projectPath": "C:\\Users\\paul_\\Documents\\GitHub\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
+        "packagesPath": "C:\\Users\\paul_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\paul_\\Documents\\GitHub\\BattleShip\\BatteShip\\EbaucheBN\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\paul_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

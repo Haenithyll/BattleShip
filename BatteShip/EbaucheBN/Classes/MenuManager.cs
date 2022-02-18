@@ -24,7 +24,6 @@ namespace EbaucheBN
 {
     internal class MenuManager
     {
-        Button myButton = new Button();
         Grid myMenuUI;
 
         public void Initialize(Grid MenuUI)
@@ -37,7 +36,7 @@ namespace EbaucheBN
         public void StartGame()
         {
             myMenuUI.Children.Clear();
-            MainPage.Instance.GridInitialization();
+            MainPage.Instance.GridInitialization(MainPage.Instance.AllyBattleShipGrid, true);
         }
 
         void OnClickPlay(object sender, RoutedEventArgs e)

@@ -23,29 +23,32 @@ namespace EbaucheBN
         Ship
     }
 
-    internal class Cell
+    public class Cell
     {
         string contentCell { get; set; }
         cellType typeOfCell;
         public Button cellButton = new Button();
+        bool Ally;
 
         public void initCell(int x, int y)
         {
             this.contentCell = Convert.ToChar(x + 64) + Convert.ToString(y);
         }
 
-        public Cell(cellType setCellType)
+        public Cell(cellType SetCellType, bool SetAlly)
         {
-            this.typeOfCell = setCellType;
+            this.typeOfCell = SetCellType;
+
+            Ally = SetAlly;
             cellButton.Width = Constants.GridWidth * 0.85 / (Constants.GridSizeX + 1);
             cellButton.Height = Constants.GridHeight * 0.85 / (Constants.GridSizeY + 1);
             cellButton.Click += OnClick;
-            cellButton.Background = new SolidColorBrush(Colors.LightGray);
+            cellButton.Background = new SolidColorBrush(Constants.DefaultColor);
         }
 
         void OnClick(object sender, RoutedEventArgs e)
         {
-            this.cellButton.Background = typeOfCell == cellType.Water ? new SolidColorBrush(Colors.SkyBlue) : new SolidColorBrush(Colors.Red);
+            MainPage.Instance.Click();
         }
     }
 }
