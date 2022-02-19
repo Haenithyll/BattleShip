@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EbaucheBN
+namespace EbaucheBN.Classes
 {
     public class BattleShipGrid
     {
-        public Cell[,] grid = new Cell[Constants.GridSizeX, Constants.GridSizeY];
+        public Cell[,] grid = new Cell[GameDesign.GridSizeX, GameDesign.GridSizeY];
         public void initGrid(bool Ally)
         {
-            for (int i = 0; i < Constants.GridSizeX; i++)
+            for (int i = 0; i < GameDesign.GridSizeX; i++)
             {
-                for (int j = 0; j < Constants.GridSizeY; j++)
+                for (int j = 0; j < GameDesign.GridSizeY; j++)
                 {
                     grid[i, j] = new Cell(cellType.Water, Ally);
                     grid[i, j].initCell(i, j);

@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace EbaucheBN
+namespace EbaucheBN.Classes
 {
     public enum cellType
     {
@@ -40,10 +40,10 @@ namespace EbaucheBN
             this.typeOfCell = SetCellType;
 
             Ally = SetAlly;
-            cellButton.Width = Constants.GridWidth * 0.85 / (Constants.GridSizeX + 1);
-            cellButton.Height = Constants.GridHeight * 0.85 / (Constants.GridSizeY + 1);
+            cellButton.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
+            cellButton.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
             cellButton.Click += OnClick;
-            cellButton.Background = new SolidColorBrush(Constants.DefaultColor);
+            cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
         }
 
         void OnClick(object sender, RoutedEventArgs e)

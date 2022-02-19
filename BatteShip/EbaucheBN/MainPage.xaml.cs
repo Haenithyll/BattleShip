@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using EbaucheBN.Classes;
+using Windows.UI.Xaml.Controls;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -14,7 +15,8 @@ namespace EbaucheBN
         public static MainPage Instance;
         public BattleShipGrid AllyBattleShipGrid = new BattleShipGrid();
         public BattleShipGrid EnemyBattleShipGrid = new BattleShipGrid();
-
+        public ShipSetupManager shipSetupManager = new ShipSetupManager(); 
+        
         GridManager myGridManager = new GridManager();
         MenuManager myMenuManager = new MenuManager();
 
@@ -39,6 +41,15 @@ namespace EbaucheBN
         public void Click()
         {
 
+        }
+
+        public Grid GetShipSetupUI()
+        {
+            return ShipSetupUI;
+        }
+        public Grid GetShipSelectionSetupUI()
+        {
+            return ShipSetupSelectionUI;
         }
     }
 

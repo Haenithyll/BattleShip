@@ -121,10 +121,12 @@
     </Compile>
     <Compile Include="Classes\BattleShipGrid.cs" />
     <Compile Include="Classes\Cell.cs" />
-    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\GameDesign.cs" />
     <Compile Include="Classes\GridManager.cs" />
     <Compile Include="Classes\Index.cs" />
     <Compile Include="Classes\MenuButton.cs" />
+    <Compile Include="Classes\Ship.cs" />
+    <Compile Include="Classes\ShipSetupManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -137,6 +139,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Visuals\Test2.jpg" />
+    <Content Include="Visuals\Test.jpg" />
     <Content Include="Visuals\Ocean_BackGround.jpg" />
     <Content Include="Visuals\cell.PNG" />
     <Content Include="Visuals\Background.jpg" />
@@ -148,6 +152,8 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Visuals\Test3.jpg" />
+    <Content Include="Visuals\Test4.jpg" />
     <Content Include="Visuals\Title.jpg" />
     <Content Include="Visuals\Title.png" />
   </ItemGroup>
@@ -166,7 +172,9 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Visuals\2D Ships\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

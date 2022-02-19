@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace EbaucheBN
+namespace EbaucheBN.Classes
 {
     internal class Index
     {
@@ -25,8 +25,8 @@ namespace EbaucheBN
         {
             this.index.Text = name;
             index.HorizontalTextAlignment = horizontal ? TextAlignment.Center : TextAlignment.Right;
-            index.Width = Constants.GridWidth * 0.85 / (Constants.GridSizeX + 1);
-            index.Height = Constants.GridHeight * 0.85 / (Constants.GridSizeY + 1);
+            index.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
+            index.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
         }
     }
 }

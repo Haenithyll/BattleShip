@@ -20,7 +20,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Core;
 
-namespace EbaucheBN
+namespace EbaucheBN.Classes
 {
     internal class MenuManager
     {
@@ -37,6 +37,7 @@ namespace EbaucheBN
         {
             myMenuUI.Children.Clear();
             MainPage.Instance.GridInitialization(MainPage.Instance.AllyBattleShipGrid, true);
+            MainPage.Instance.shipSetupManager.Initialize();
         }
 
         void OnClickPlay(object sender, RoutedEventArgs e)

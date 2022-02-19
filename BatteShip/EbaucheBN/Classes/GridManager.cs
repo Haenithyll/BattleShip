@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace EbaucheBN
+namespace EbaucheBN.Classes
 {
     internal class GridManager
     {
@@ -23,16 +23,16 @@ namespace EbaucheBN
         {
             bool initialized = false;
 
-            for (int i = 0; i <= Constants.GridSizeX; i++)
+            for (int i = 0; i <= GameDesign.GridSizeX; i++)
             {
                 CurrentGrid.RowDefinitions.Add(new RowDefinition());
 
-                for (int j = 0; j <= Constants.GridSizeY; j++)
+                for (int j = 0; j <= GameDesign.GridSizeY; j++)
                 {
                     if (!initialized)
                     {
                         CurrentGrid.ColumnDefinitions.Add(new ColumnDefinition());
-                        initialized = j == Constants.GridSizeY ? true : false;
+                        initialized = j == GameDesign.GridSizeY ? true : false;
                     }
 
                     if (j == 0 && i != 0)
@@ -73,8 +73,8 @@ namespace EbaucheBN
 
         public void SetSize(Grid CurrentGrid)
         {
-            CurrentGrid.Width = Constants.GridWidth;
-            CurrentGrid.Height = Constants.GridHeight;
+            CurrentGrid.Width = GameDesign.GridWidth;
+            CurrentGrid.Height = GameDesign.GridHeight;
         }
     }
 }
