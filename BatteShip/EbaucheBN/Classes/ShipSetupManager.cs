@@ -19,6 +19,8 @@ namespace EbaucheBN.Classes
 {
     public class ShipSetupManager
     {
+        HashSet<ShipSelectionButton> buttons = new HashSet<ShipSelectionButton>();
+
         TextBlock ShipSelectionText = new TextBlock();
         Grid UI, SelectionUI;
 
@@ -44,26 +46,37 @@ namespace EbaucheBN.Classes
         void InitializeBoatSelection()
         {
             SelectionUI.RowDefinitions.Add(new RowDefinition());
+            SelectionUI.RowDefinitions.Add(new RowDefinition());
 
             for (int ShipCount = 0; ShipCount < GameDesign.ShipCount; ShipCount++)
             {
                 SelectionUI.ColumnDefinitions.Add(new ColumnDefinition());
 
-                Button ShipSelectionButton = new Button();
-                TextBlock ShipSelectionText = new TextBlock();
-
-                ShipSelectionText.Text = GameDesign.ShipArray[ShipCount].Name;
-                ShipSelectionText.Foreground = new SolidColorBrush(Colors.Black);
-
-                ShipSelectionButton.Width = UI.Width / (GameDesign.ShipCount+1);
-                ShipSelectionButton.Height = 50;
-                ShipSelectionButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
-                ShipSelectionButton.Content = ShipSelectionText;
-
-                SelectionUI.Children.Add(ShipSelectionButton);
-                Grid.SetRow(ShipSelectionButton, 0);
-                Grid.SetColumn(ShipSelectionButton, ShipCount);
+                ShipSelectionButton newShipSelectionButton = new ShipSelectionButton(ShipCount, UI, SelectionUI);
+                buttons.Add(newShipSelectionButton);
             }
+        }
+
+        public void Click(ShipSelectionButton ButtonClicked)
+        {
+            UpdateButtonColor(ButtonClicked);
+            StartCoordinateSelection(ButtonClicked);  
+        }
+
+        public void UpdateButtonColor(ShipSelectionButton ButtonClicked)
+        {
+            foreach (ShipSelectionButton Button in buttons)
+            {
+                if (Button != ButtonClicked)
+                    Button.Button.Background = new SolidColorBrush(GameDesign.DefaultColor);
+                else
+                    Button.Button.Background = new SolidColorBrush(GameDesign.SelectColor);
+            }
+        }
+
+        public void StartCoordinateSelection(ShipSelectionButton ButtonClicked)
+        {
+
         }
     }
 }

@@ -34,5 +34,6 @@ namespace EbaucheBN.Classes
         public static Windows.UI.Color DefaultColor = Colors.LightGray;
         public static Windows.UI.Color ShipColor = Colors.Gray;
         public static Windows.UI.Color WaterColor = Colors.SkyBlue;
+        public static Windows.UI.Color SelectColor = Colors.DarkOrange;
     }
 }

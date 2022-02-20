@@ -126,6 +126,7 @@
     <Compile Include="Classes\Index.cs" />
     <Compile Include="Classes\MenuButton.cs" />
     <Compile Include="Classes\Ship.cs" />
+    <Compile Include="Classes\ShipSelectionButton.cs" />
     <Compile Include="Classes\ShipSetupManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
