@@ -39,8 +39,7 @@ namespace EbaucheBN.Classes
             Grid.SetRow(Button, 0);
             Grid.SetColumn(Button, ShipCount);
 
-            Coordinates.Width = UI.Width / (GameDesign.ShipCount + 1);
-            Coordinates.Height = 50;
+            Coordinates.HorizontalAlignment = HorizontalAlignment.Center;
             Coordinates.Foreground = new SolidColorBrush(Colors.White);
             Coordinates.FontSize = 20;
 

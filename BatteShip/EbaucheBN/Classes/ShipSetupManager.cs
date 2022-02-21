@@ -21,6 +21,7 @@ namespace EbaucheBN.Classes
     {
         HashSet<ShipSelectionButton> buttons = new HashSet<ShipSelectionButton>();
 
+        public TextBlock Coordinates = new TextBlock();
         TextBlock ShipSelectionText = new TextBlock();
         Grid UI, SelectionUI;
 
@@ -70,13 +71,14 @@ namespace EbaucheBN.Classes
                 if (Button != ButtonClicked)
                     Button.Button.Background = new SolidColorBrush(GameDesign.DefaultColor);
                 else
-                    Button.Button.Background = new SolidColorBrush(GameDesign.SelectColor);
+                    Button.Button.Background = new SolidColorBrush(GameDesign.ShipSelectColor);
             }
         }
 
         public void StartCoordinateSelection(ShipSelectionButton ButtonClicked)
         {
-
+            MainPage.Instance.Selection = true;
+            Coordinates = ButtonClicked.Coordinates;
         }
     }
 }

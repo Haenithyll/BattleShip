@@ -15,8 +15,7 @@ namespace EbaucheBN.Classes
             {
                 for (int j = 0; j < GameDesign.GridSizeY; j++)
                 {
-                    grid[i, j] = new Cell(cellType.Water, Ally);
-                    grid[i, j].initCell(i, j);
+                    grid[i, j] = new Cell(cellType.Water, Ally, i, j);
                 }
             }
         }

@@ -25,32 +25,36 @@ namespace EbaucheBN.Classes
 
     public class Cell
     {
-        string contentCell { get; set; }
+        public string contentCell;
         cellType typeOfCell;
         public Button cellButton = new Button();
         bool Ally;
-        bool HitYet;
+        public bool HitYet;
 
         public void initCell(int x, int y)
         {
             this.contentCell = Convert.ToChar(x + 64) + Convert.ToString(y);
         }
 
-        public Cell(cellType SetCellType, bool SetAlly)
+        public Cell(cellType SetCellType, bool SetAlly, int x, int y)
         {
-            this.typeOfCell = SetCellType;
+            typeOfCell = SetCellType;
 
             Ally = SetAlly;
             HitYet = false;
+
+            contentCell = Convert.ToChar(y + 65) + Convert.ToString(x + 1);
+
             cellButton.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
             cellButton.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
-            cellButton.Click += OnClick;
             cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
+
+            cellButton.Click += OnClick;
         }
 
         void OnClick(object sender, RoutedEventArgs e)
         {
-            MainPage.Instance.Click();
+            MainPage.Instance.Click(this);
         }
     }
 }
