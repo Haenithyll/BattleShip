@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PkxUHcQcwGYfbM7Rhk6z/gKZtGrkmJHmTU+LB0n3CRikOEZhcxOzk8Gdk8zQHc4EYeUOPoDyz5Qbzus2vxctYg==",
+  "dgSpecHash": "bBj9ZWmOxbKQqsamsK1svLxNvkUDfX2K76puYje4ihd5fl1h5R1H8ba7TJqsr7mnTg1+yRWeTm1AlwmxazRcPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paul_\\Documents\\GitHub\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
+  "projectFilePath": "C:\\Users\\romai\\source\\repos\\BattleShip\\BatteShip\\EbaucheBN\\EbaucheBN.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.10-rel-29722-00\\microsoft.net.native.compiler.2.2.10-rel-29722-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.12\\microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",

@@ -1,1 +1,1 @@
-C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\EbaucheBN.csproj;x86
+C:\Users\romai\source\repos\BattleShip\BatteShip\EbaucheBN\EbaucheBN.csproj;x86

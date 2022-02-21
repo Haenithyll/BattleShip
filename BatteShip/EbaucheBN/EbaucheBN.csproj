@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Classes\BattleShipGrid.cs" />
     <Compile Include="Classes\Cell.cs" />
+    <Compile Include="Classes\Class1.cs" />
     <Compile Include="Classes\GameDesign.cs" />
     <Compile Include="Classes\GridManager.cs" />
     <Compile Include="Classes\Index.cs" />

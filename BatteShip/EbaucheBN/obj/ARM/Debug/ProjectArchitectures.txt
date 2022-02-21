@@ -1,0 +1,1 @@
+C:\Users\romai\source\repos\BattleShip\BatteShip\EbaucheBN\EbaucheBN.csproj;arm
