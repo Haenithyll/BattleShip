@@ -29,6 +29,7 @@ namespace EbaucheBN.Classes
         cellType typeOfCell;
         public Button cellButton = new Button();
         bool Ally;
+        bool HitYet;
 
         public void initCell(int x, int y)
         {
@@ -40,6 +41,7 @@ namespace EbaucheBN.Classes
             this.typeOfCell = SetCellType;
 
             Ally = SetAlly;
+            HitYet = false;
             cellButton.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
             cellButton.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
             cellButton.Click += OnClick;
