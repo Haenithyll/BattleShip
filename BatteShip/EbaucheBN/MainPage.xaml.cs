@@ -1,5 +1,7 @@
 ﻿using EbaucheBN.Classes;
+using System;
 using System.Collections.Generic;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
@@ -26,9 +28,6 @@ namespace EbaucheBN
 
         public bool Selection = false;
 
-        private List<string> Compare = new List<string>();
-        private string[] CompareArray;
-
         public MainPage()
         {
             Instance = this;
@@ -49,17 +48,13 @@ namespace EbaucheBN
         {
             if (Selection)
             {
-                CellClicked.cellButton.Background = new SolidColorBrush(GameDesign.CellSelectColor);
-
-                if (!Compare.Contains(CellClicked.contentCell))
-                {
-                    Compare.Add(CellClicked.contentCell);
-                    Compare.Sort();
-                    CompareArray = Compare.ToArray();
-                    shipSetupManager.Coordinates.Text = string.Empty;
-                    for (int count = 0; count < Compare.Count; count++)
-                        shipSetupManager.Coordinates.Text += CompareArray[count];
-                }
+                shipSetupManager.ProceedShipSetup(CellClicked);
+            }
+            else
+            {
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = CellClicked.cellIndex.ToString();
+                CellClicked.cellButton.Content = textBlock;
             }
         }
 
@@ -72,6 +67,4 @@ namespace EbaucheBN
             return ShipSetupSelectionUI;
         }
     }
-
-
 }

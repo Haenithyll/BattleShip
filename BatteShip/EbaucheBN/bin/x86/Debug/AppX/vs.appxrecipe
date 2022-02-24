@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-02-21T18:26:40.922</Modified>
+      <Modified>2022-02-24T22:19:12.934</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\EbaucheBN.exe">
       <PackagePath>entrypoint\EbaucheBN.exe</PackagePath>
-      <Modified>2022-02-21T18:26:39.617</Modified>
+      <Modified>2022-02-24T22:19:11.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -126,11 +126,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-02-21T18:26:39.499</Modified>
+      <Modified>2022-02-24T22:19:11.543</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-02-21T18:26:39.499</Modified>
+      <Modified>2022-02-24T22:19:11.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -138,11 +138,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-02-21T15:31:16.946</Modified>
+      <Modified>2022-02-24T21:30:15.242</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\Core\EbaucheBN.exe">
       <PackagePath>EbaucheBN.exe</PackagePath>
-      <Modified>2022-02-21T18:26:40.906</Modified>
+      <Modified>2022-02-24T22:19:12.925</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -25,16 +25,12 @@ namespace EbaucheBN.Classes
 
     public class Cell
     {
-        public string contentCell;
+        public string cellCoordinate;
+        public int cellIndex;
         cellType typeOfCell;
         public Button cellButton = new Button();
         bool Ally;
         public bool HitYet;
-
-        public void initCell(int x, int y)
-        {
-            this.contentCell = Convert.ToChar(x + 64) + Convert.ToString(y);
-        }
 
         public Cell(cellType SetCellType, bool SetAlly, int x, int y)
         {
@@ -43,7 +39,8 @@ namespace EbaucheBN.Classes
             Ally = SetAlly;
             HitYet = false;
 
-            contentCell = Convert.ToChar(y + 65) + Convert.ToString(x + 1);
+            cellCoordinate = Convert.ToChar(y + 65) + Convert.ToString(x + 1);
+            cellIndex = GameDesign.GridSizeX * x + y + 1;
 
             cellButton.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
             cellButton.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
