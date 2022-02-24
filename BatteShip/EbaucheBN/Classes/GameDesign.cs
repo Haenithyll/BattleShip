@@ -16,16 +16,16 @@ namespace EbaucheBN.Classes
         public const int GridHeight = 700;
         public const int GridWidth = 700;
 
+        public static Ship Fregate = new Ship("Fregate", 2);
         public static Ship Scout = new Ship("Scout", 3);
-        public static Ship Scout2 = new Ship("Scout", 3);
         public static Ship Submarine = new Ship("Submarine", 3);
         public static Ship Destroyer = new Ship("Destroyer", 4);
-        public static Ship PlaneCarrier = new Ship("Plane\nCarrier", 5);
+        public static Ship PlaneCarrier = new Ship("AirCraft\nCarrier", 5);
 
         public static readonly HashSet<Ship> ShipList = new HashSet<Ship>()
         {
+            Fregate,
             Scout,
-            Scout2,
             Submarine,
             Destroyer,
             PlaneCarrier
