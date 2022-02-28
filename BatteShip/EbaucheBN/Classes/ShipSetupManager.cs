@@ -64,6 +64,8 @@ namespace EbaucheBN.Classes
 
         public void Click(ShipSelection ButtonClicked)
         {
+            ShipSelectionText.Text = "Now Click on the grid to select the ship's coordinates";
+            ResetCurrentBoatSelection();
             UpdateButtonColor(ButtonClicked);
             StartCoordinateSelection(ButtonClicked);
         }
@@ -83,6 +85,25 @@ namespace EbaucheBN.Classes
         {
             MainPage.Instance.Selection = true;
             CurrentShip = ButtonClicked;
+        }
+
+        public void ResetCurrentBoatSelection()
+        {
+            if(CurrentShipCells.Count > 0)
+            {
+                foreach(Cell cell in CurrentShipCells)
+                {
+                    ShipCells.Remove(cell);
+                    cell.cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
+                }
+
+                foreach(Coordinate coord in CurrentShip.Coordinates)
+                {
+                    coord.TextBlock.Text = string.Empty;
+                }
+
+                CurrentShipCells.Clear();
+            }
         }
 
         public void ProceedShipSetup(Cell CellClicked)
@@ -135,9 +156,16 @@ namespace EbaucheBN.Classes
                         }
                     }
 
+                    ShipSelectionText.Text = "Select a ship to set its coordinates";
                     CurrentShipCells.Clear();
+                    TestSelectionComplete();
                 }
             }
+        }
+
+        private void TestSelectionComplete()
+        {
+
         }
 
         private bool VerifyCoordinates()

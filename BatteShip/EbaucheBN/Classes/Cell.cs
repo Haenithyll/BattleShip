@@ -32,7 +32,7 @@ namespace EbaucheBN.Classes
         bool Ally;
         public bool HitYet;
 
-        public Cell(cellType SetCellType, bool SetAlly, int x, int y)
+        public Cell(cellType SetCellType, bool SetAlly, int x, int y, Grid UI)
         {
             typeOfCell = SetCellType;
 
@@ -42,8 +42,8 @@ namespace EbaucheBN.Classes
             cellCoordinate = Convert.ToChar(y + 65) + Convert.ToString(x + 1);
             cellIndex = GameDesign.GridSizeX * x + y + 1;
 
-            cellButton.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
-            cellButton.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
+            cellButton.Width = UI.Width * 0.85 / (GameDesign.GridSizeX + 1);
+            cellButton.Height = UI.Height * 0.85 / (GameDesign.GridSizeY + 1);
             cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
 
             cellButton.Click += OnClick;

@@ -20,13 +20,17 @@ namespace EbaucheBN.Classes
     internal class Index
     {
         public TextBlock index = new TextBlock();
+        public Button button = new Button();
 
-        public Index(string name, bool horizontal)
+        public Index(string name, Grid UI)
         {
-            this.index.Text = name;
-            index.HorizontalTextAlignment = horizontal ? TextAlignment.Center : TextAlignment.Right;
-            index.Width = GameDesign.GridWidth * 0.85 / (GameDesign.GridSizeX + 1);
-            index.Height = GameDesign.GridHeight * 0.85 / (GameDesign.GridSizeY + 1);
+            index.Text = name;
+
+            button.Width = UI.Width * 0.85 / (GameDesign.GridSizeX + 1);
+            button.Height = UI.Height * 0.85 / (GameDesign.GridSizeY + 1);
+            button.Background = null;
+            button.IsEnabled = false;
+            button.Content = index;
         }
     }
 }

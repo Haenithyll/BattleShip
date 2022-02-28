@@ -13,9 +13,6 @@ namespace EbaucheBN.Classes
         public const int GridSizeX = 13;
         public const int GridSizeY = 13;
 
-        public const int GridHeight = 700;
-        public const int GridWidth = 700;
-
         public static Ship Fregate = new Ship("Fregate", 2);
         public static Ship Scout = new Ship("Scout", 3);
         public static Ship Submarine = new Ship("Submarine", 3);
@@ -42,6 +39,7 @@ namespace EbaucheBN.Classes
         public static Windows.UI.Color ResetButtonColor = Colors.Red;
 
         public static int MaxSize = maxSize();
+        public static int TotalSize = totalSize();
 
         public static int maxSize()
         {
@@ -54,6 +52,16 @@ namespace EbaucheBN.Classes
             }
 
             return max;
+        }
+
+        public static int totalSize()
+        {
+            int sum = 0;
+
+            foreach (Ship ship in ShipList)
+                sum += ship.Size;
+
+            return sum;
         }
     }
 }

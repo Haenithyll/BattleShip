@@ -40,8 +40,7 @@ namespace EbaucheBN
         {
             BSGridToInitialize.initGrid(Ally);
 
-            myGridManager.Setup(Ally ? allyGrid : enemyGrid, BSGridToInitialize);
-            myGridManager.SetSize(Ally ? allyGrid : enemyGrid);
+            myGridManager.Setup(Ally ? allyGrid : enemyGrid, BSGridToInitialize, Ally);
         }
 
         public void Click(Cell CellClicked)
@@ -66,5 +65,15 @@ namespace EbaucheBN
         {
             return ShipSetupSelectionUI;
         }
+
+        public Grid GetAllyGrid()
+        {
+            return allyGrid;
+        }
+        public Grid GetEnemyGrid()
+        {
+            return enemyGrid;
+        }
+
     }
 }

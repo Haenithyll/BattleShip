@@ -19,9 +19,10 @@ namespace EbaucheBN.Classes
 {
     internal class GridManager
     {
-        public void Setup(Grid CurrentGrid, BattleShipGrid CurrentBattleShipGrid)
+        public void Setup(Grid CurrentGrid, BattleShipGrid CurrentBattleShipGrid, bool Ally)
         {
             bool initialized = false;
+            Grid UI = Ally ? MainPage.Instance.GetAllyGrid() : MainPage.Instance.GetEnemyGrid();
 
             for (int i = 0; i <= GameDesign.GridSizeX; i++)
             {
@@ -37,27 +38,20 @@ namespace EbaucheBN.Classes
 
                     if (j == 0 && i != 0)
                     {
-                        Index NewIndex = new Index("\n" + i.ToString(), false);
-                        CurrentGrid.Children.Add(NewIndex.index);
-                        Grid.SetRow(NewIndex.index, i);
-                        Grid.SetColumn(NewIndex.index, j);
+                        Index NewIndex = new Index(i.ToString(), UI);
+                        CurrentGrid.Children.Add(NewIndex.button);
+                        Grid.SetRow(NewIndex.button, i);
+                        Grid.SetColumn(NewIndex.button, j);
                     }
                     else if (i == 0)
                     {
                         if (j != 0)
                         {
                             char currentChar = Convert.ToChar(j + 64);
-                            Index NewIndex = new Index("\n" + currentChar.ToString(), true);
-                            CurrentGrid.Children.Add(NewIndex.index);
-                            Grid.SetRow(NewIndex.index, i);
-                            Grid.SetColumn(NewIndex.index, j);
-                        }
-                        else
-                        {
-                            Index EmptyIndex = new Index("", false);
-                            CurrentGrid.Children.Add(EmptyIndex.index);
-                            Grid.SetRow(EmptyIndex.index, i);
-                            Grid.SetColumn(EmptyIndex.index, j);
+                            Index NewIndex = new Index(currentChar.ToString(), UI);
+                            CurrentGrid.Children.Add(NewIndex.button);
+                            Grid.SetRow(NewIndex.button, i);
+                            Grid.SetColumn(NewIndex.button, j);
                         }
                     }
                     else
@@ -69,12 +63,6 @@ namespace EbaucheBN.Classes
                     }
                 }
             }
-        }
-
-        public void SetSize(Grid CurrentGrid)
-        {
-            CurrentGrid.Width = GameDesign.GridWidth;
-            CurrentGrid.Height = GameDesign.GridHeight;
         }
     }
 }
