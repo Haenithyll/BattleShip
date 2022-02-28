@@ -11,6 +11,8 @@ namespace EbaucheBN.Classes
         public string Name;
         public int Size;
 
+        public List<Cell> Position = new List<Cell>();
+
         public Ship(string inputName, int inputSize)
         {
             this.Name = inputName;

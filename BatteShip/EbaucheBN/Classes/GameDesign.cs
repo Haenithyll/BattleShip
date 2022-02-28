@@ -32,11 +32,12 @@ namespace EbaucheBN.Classes
 
         public static Windows.UI.Color DefaultColor = Colors.LightGray;
         public static Windows.UI.Color ShipColor = Colors.DarkOrange;
-        public static Windows.UI.Color WaterColor = Colors.SkyBlue;
+        public static Windows.UI.Color WaterColor = Colors.CadetBlue;
         public static Windows.UI.Color ShipSelectColor = Colors.MediumPurple;
         public static Windows.UI.Color CellSelectColor = Colors.MediumPurple;
         public static Windows.UI.Color ShipCoordColor = Colors.Orange;
         public static Windows.UI.Color ResetButtonColor = Colors.Red;
+        public static Windows.UI.Color StartGameColor = Colors.ForestGreen;
 
         public static int MaxSize = maxSize();
         public static int TotalSize = totalSize();

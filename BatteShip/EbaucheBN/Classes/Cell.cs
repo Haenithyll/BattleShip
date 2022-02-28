@@ -27,9 +27,9 @@ namespace EbaucheBN.Classes
     {
         public string cellCoordinate;
         public int cellIndex;
-        cellType typeOfCell;
+        public cellType typeOfCell;
         public Button cellButton = new Button();
-        bool Ally;
+        public bool Ally;
         public bool HitYet;
 
         public Cell(cellType SetCellType, bool SetAlly, int x, int y, Grid UI)

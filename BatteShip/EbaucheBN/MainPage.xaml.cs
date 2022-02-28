@@ -17,12 +17,16 @@ namespace EbaucheBN
     public sealed partial class MainPage : Page
     {
         public static MainPage Instance;
+
         public BattleShipGrid AllyBattleShipGrid = new BattleShipGrid();
         public BattleShipGrid EnemyBattleShipGrid = new BattleShipGrid();
         public ShipSetupManager shipSetupManager = new ShipSetupManager();
 
+        GameManager myGameManager = new GameManager();
         GridManager myGridManager = new GridManager();
         MenuManager myMenuManager = new MenuManager();
+
+        public HashSet<Ship> allyShips = new HashSet<Ship>();
 
         public bool GameStarted = false;
 
@@ -49,11 +53,33 @@ namespace EbaucheBN
             {
                 shipSetupManager.ProceedShipSetup(CellClicked);
             }
-            else
+            if (!CellClicked.Ally)
             {
-                TextBlock textBlock = new TextBlock();
-                textBlock.Text = CellClicked.cellIndex.ToString();
-                CellClicked.cellButton.Content = textBlock;
+                CellClicked.cellButton.Background = CellClicked.typeOfCell == cellType.Water ? new SolidColorBrush(GameDesign.WaterColor) : new SolidColorBrush(GameDesign.ShipColor);
+            }
+        }
+
+        public void StartGame()
+        {
+            foreach(ShipSelection shipSelection in shipSetupManager.buttons)
+            {
+                shipSelection.ship.Position.AddRange(shipSelection.ShipCells);
+            }
+
+            ShipSetupUI.Children.Clear();
+            ShipSetupSelectionUI.Children.Clear();
+
+            GridInitialization(EnemyBattleShipGrid, false);
+            Test();
+            //myGameManager.Initialize();
+        }
+
+        public void Test()
+        {
+            foreach(Ship allyShip in allyShips)
+            {
+                foreach (Cell cell in allyShip.Position)
+                    cell.cellButton.Background = new SolidColorBrush(Colors.BlueViolet);
             }
         }
 
@@ -73,6 +99,12 @@ namespace EbaucheBN
         public Grid GetEnemyGrid()
         {
             return enemyGrid;
+        }
+        public void CoordReset()
+        {
+            shipSetupManager.ShipSelectionText.Text = "Select a ship to set its coordinates";
+            shipSetupManager.startGameButton.button.IsEnabled = false;
+            shipSetupManager.startGameButton.textBlock.Foreground = new SolidColorBrush(Colors.Black);
         }
 
     }

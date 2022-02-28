@@ -22,8 +22,8 @@ namespace EbaucheBN.Classes
         public Button ShipButton = new Button();
 
         public List<Coordinate> Coordinates = new List<Coordinate>();
-
         public List<Cell> ShipCells = new List<Cell>();
+        public Ship ship;
 
         public int ShipSize;
         public bool Complete = false;
@@ -33,7 +33,7 @@ namespace EbaucheBN.Classes
 
         public Color CurrentColor = GameDesign.DefaultColor;
 
-        public ShipSelection(int ShipCount, Grid UI)
+        public ShipSelection(int ShipCount, Grid UI, Ship inputShip)
         {
             ResetCoordinatesAction += ResetCoordinates;
 
@@ -65,6 +65,9 @@ namespace EbaucheBN.Classes
                 Grid.SetColumn(newCoord.Button, CoordinatesAmount+1);
                 Coordinates.Add(newCoord);
             }
+
+            ship = inputShip;
+            MainPage.Instance.allyShips.Add(ship);
         }
 
         void OnClick(object sender, RoutedEventArgs e)
@@ -98,6 +101,7 @@ namespace EbaucheBN.Classes
             reset.textBlock.Foreground = new SolidColorBrush(Colors.Black);
 
             ShipCells.Clear();
+            MainPage.Instance.CoordReset();
         }
     }
 }

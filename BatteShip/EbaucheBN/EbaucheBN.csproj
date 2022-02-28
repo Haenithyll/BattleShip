@@ -124,6 +124,7 @@
     <Compile Include="Classes\Class1.cs" />
     <Compile Include="Classes\Coordinate.cs" />
     <Compile Include="Classes\GameDesign.cs" />
+    <Compile Include="Classes\GameManager.cs" />
     <Compile Include="Classes\GridManager.cs" />
     <Compile Include="Classes\Index.cs" />
     <Compile Include="Classes\MenuButton.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Classes\Ship.cs" />
     <Compile Include="Classes\ShipSelection.cs" />
     <Compile Include="Classes\ShipSetupManager.cs" />
+    <Compile Include="Classes\StartGameButton.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

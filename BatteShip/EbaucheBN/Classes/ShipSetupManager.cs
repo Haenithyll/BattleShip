@@ -19,9 +19,10 @@ namespace EbaucheBN.Classes
 {
     public class ShipSetupManager
     {
-        HashSet<ShipSelection> buttons = new HashSet<ShipSelection>();
-        TextBlock ShipSelectionText = new TextBlock();
-        Grid UI, SelectionUI;
+        public HashSet<ShipSelection> buttons = new HashSet<ShipSelection>();
+        public TextBlock ShipSelectionText = new TextBlock();
+        private Grid UI, SelectionUI;
+        public StartGameButton startGameButton;
 
         public ShipSelection CurrentShip;
 
@@ -57,9 +58,11 @@ namespace EbaucheBN.Classes
             {
                 SelectionUI.RowDefinitions.Add(new RowDefinition());
 
-                ShipSelection newShipSelectionButton = new ShipSelection(ShipCount, SelectionUI);
+                ShipSelection newShipSelectionButton = new ShipSelection(ShipCount, SelectionUI, GameDesign.ShipArray[ShipCount]);
                 buttons.Add(newShipSelectionButton);
             }
+
+            startGameButton = new StartGameButton(SelectionUI);
         }
 
         public void Click(ShipSelection ButtonClicked)
@@ -165,7 +168,12 @@ namespace EbaucheBN.Classes
 
         private void TestSelectionComplete()
         {
-
+            if (ShipCells.Count == GameDesign.TotalSize)
+            {
+                ShipSelectionText.Text = "Press Start Game to play !";
+                startGameButton.button.IsEnabled = true;
+                startGameButton.textBlock.Foreground = new SolidColorBrush(Colors.White);
+            }
         }
 
         private bool VerifyCoordinates()
