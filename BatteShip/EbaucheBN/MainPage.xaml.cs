@@ -22,7 +22,8 @@ namespace EbaucheBN
         public BattleShipGrid EnemyBattleShipGrid = new BattleShipGrid();
         public ShipSetupManager shipSetupManager = new ShipSetupManager();
 
-        GameManager myGameManager = new GameManager();
+        public GameManager myGameManager = new GameManager();
+        
         GridManager myGridManager = new GridManager();
         MenuManager myMenuManager = new MenuManager();
 
@@ -49,38 +50,25 @@ namespace EbaucheBN
 
         public void Click(Cell CellClicked)
         {
-            if (Selection)
-            {
+            if (Selection && CellClicked.Ally)
                 shipSetupManager.ProceedShipSetup(CellClicked);
-            }
-            if (!CellClicked.Ally)
+            else if (!CellClicked.Ally && !myGameManager.AItoPlay)
             {
-                CellClicked.cellButton.Background = CellClicked.typeOfCell == cellType.Water ? new SolidColorBrush(GameDesign.WaterColor) : new SolidColorBrush(GameDesign.ShipColor);
+                myGameManager.Hit(CellClicked);
             }
         }
 
         public void StartGame()
         {
-            foreach(ShipSelection shipSelection in shipSetupManager.buttons)
-            {
-                shipSelection.ship.Position.AddRange(shipSelection.ShipCells);
-            }
+            shipSetupManager.GetAllyShipCoordinates();
+            shipSetupManager.ChangeAllyShipsColor();
 
             ShipSetupUI.Children.Clear();
             ShipSetupSelectionUI.Children.Clear();
 
             GridInitialization(EnemyBattleShipGrid, false);
-            Test();
-            //myGameManager.Initialize();
-        }
-
-        public void Test()
-        {
-            foreach(Ship allyShip in allyShips)
-            {
-                foreach (Cell cell in allyShip.Position)
-                    cell.cellButton.Background = new SolidColorBrush(Colors.BlueViolet);
-            }
+ 
+            myGameManager.Initialize();
         }
 
         public Grid GetShipSetupUI()
@@ -95,6 +83,10 @@ namespace EbaucheBN
         public Grid GetAllyGrid()
         {
             return allyGrid;
+        }
+        public BattleShipGrid GetAllyBSGrid()
+        {
+            return AllyBattleShipGrid;
         }
         public Grid GetEnemyGrid()
         {

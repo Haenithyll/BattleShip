@@ -22,16 +22,18 @@ namespace EbaucheBN.Classes
         public static readonly HashSet<Ship> ShipList = new HashSet<Ship>()
         {
             Fregate,
-            Scout,
-            Submarine,
-            Destroyer,
-            PlaneCarrier
+            //Scout,
+            //Submarine,
+            //Destroyer,
+            //PlaneCarrier
         };
         public static int ShipCount = ShipList.Count;
         public static readonly Ship[] ShipArray = ShipList.ToArray();
 
         public static Windows.UI.Color DefaultColor = Colors.LightGray;
         public static Windows.UI.Color ShipColor = Colors.DarkOrange;
+        public static Windows.UI.Color ShipHitColor = Colors.Red;
+        public static Windows.UI.Color ShipDestroyedColor = Colors.DarkRed;
         public static Windows.UI.Color WaterColor = Colors.CadetBlue;
         public static Windows.UI.Color ShipSelectColor = Colors.MediumPurple;
         public static Windows.UI.Color CellSelectColor = Colors.MediumPurple;

@@ -16,7 +16,7 @@
         <Grid x:ConnectionId='5' Name="ShipSetupSelectionUI" Margin="0,106,0,0" Height="556" Canvas.Top="218" Width="922" Canvas.Left="903"/>
         <Grid x:ConnectionId='6' Name="MenuUI" Height="297" Width="357" Canvas.Left="782" Canvas.Top="477"/>
         <Grid x:ConnectionId='7' Name="allyGrid" Height="700" Width="700" Canvas.Left="90" Canvas.Top="190"/>
-        <Grid x:ConnectionId='8' Name="enemyGrid" Height="700" Width="700" Canvas.Left="1102" Canvas.Top="190"/>
+        <Grid x:ConnectionId='8' Name="enemyGrid" Height="700" Width="700" Canvas.Left="1144" Canvas.Top="190"/>
         <Canvas.Background>
             <ImageBrush ImageSource="Visuals/Test4.jpg" Stretch="UniformToFill"/>
         </Canvas.Background>

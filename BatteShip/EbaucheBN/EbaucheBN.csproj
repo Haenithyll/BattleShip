@@ -119,9 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\AI.cs" />
     <Compile Include="Classes\BattleShipGrid.cs" />
     <Compile Include="Classes\Cell.cs" />
-    <Compile Include="Classes\Class1.cs" />
     <Compile Include="Classes\Coordinate.cs" />
     <Compile Include="Classes\GameDesign.cs" />
     <Compile Include="Classes\GameManager.cs" />

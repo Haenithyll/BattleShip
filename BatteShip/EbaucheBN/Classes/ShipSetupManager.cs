@@ -65,6 +65,23 @@ namespace EbaucheBN.Classes
             startGameButton = new StartGameButton(SelectionUI);
         }
 
+        public void GetAllyShipCoordinates()
+        {
+            foreach (ShipSelection shipSelection in buttons)
+            {
+                shipSelection.ship.Position.AddRange(shipSelection.ShipCells);
+            }
+        }
+
+        public void ChangeAllyShipsColor()
+        {
+            foreach (Ship allyShip in MainPage.Instance.allyShips)
+            {
+                foreach (Cell cell in allyShip.Position)
+                    cell.cellButton.Background = new SolidColorBrush(Colors.BlueViolet);
+            }
+        }
+
         public void Click(ShipSelection ButtonClicked)
         {
             ShipSelectionText.Text = "Now Click on the grid to select the ship's coordinates";
