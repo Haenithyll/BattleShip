@@ -56,6 +56,12 @@ namespace EbaucheBN
             {
                 myGameManager.Hit(CellClicked);
             }
+            else
+            {
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = CellClicked.cellIndex.ToString();
+                CellClicked.cellButton.Content = textBlock;
+            }
         }
 
         public void StartGame()
@@ -98,6 +104,5 @@ namespace EbaucheBN
             shipSetupManager.startGameButton.button.IsEnabled = false;
             shipSetupManager.startGameButton.textBlock.Foreground = new SolidColorBrush(Colors.Black);
         }
-
     }
 }
