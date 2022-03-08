@@ -120,6 +120,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\AI.cs" />
+    <Compile Include="Classes\AIShipSetupManager.cs" />
     <Compile Include="Classes\BattleShipGrid.cs" />
     <Compile Include="Classes\Cell.cs" />
     <Compile Include="Classes\Coordinate.cs" />

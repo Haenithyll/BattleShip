@@ -5,9 +5,9 @@ namespace EbaucheBN.Classes
 {
     internal class AI
     {
-        static BattleShipGrid grid = new BattleShipGrid();
-
-        static bool lastHitSuccessful = false;
+        private BattleShipGrid allyGrid = new BattleShipGrid();
+        private BattleShipGrid enemyGrid = new BattleShipGrid();
+        private AIShipSetupManager myAIshipSetupManager = new AIShipSetupManager();
 
         public List<Cell> potentialShipPosition = new List<Cell>();
         public List<Cell> shipCellHits = new List<Cell>();
@@ -16,17 +16,21 @@ namespace EbaucheBN.Classes
         private int HitY = new int();
         private int ShipOffSet = new int();
         private int TestOffSet = new int();
-        private int CurrentShipCount = GameDesign.ShipCount;
+
+        private int CurrentAllyShipCount = GameDesign.ShipCount;
+        private int CurrentEnemyShipCount = GameDesign.ShipCount;
 
         public void Initialize()
         {
-            grid = MainPage.Instance.GetAllyBSGrid();
+            allyGrid = MainPage.Instance.GetAllyBSGrid();
+            enemyGrid = MainPage.Instance.GetEnemyBSGrid();
+            myAIshipSetupManager.SetupAIShips(enemyGrid);
         }
         public void AIHit()
         {
             Cell currentCellHit = null;
 
-            if (shipCellHits.Count > 2)
+            if (shipCellHits.Count >= 2)
                 currentCellHit = FinishShip();
             else if (shipCellHits.Count > 0)
                 currentCellHit = HitPotentialPosition();
@@ -79,9 +83,9 @@ namespace EbaucheBN.Classes
                 HitX = Hit.Next(0, GameDesign.GridSizeX);
                 HitY = GetHitY(HitX);
             }
-            while (grid.getCell(HitX, HitY).HitYet == true);
+            while (allyGrid.getCell(HitX, HitY).HitYet == true);
 
-            return(grid.getCell(HitX, HitY));
+            return(allyGrid.getCell(HitX, HitY));
         }
         private int GetHitY(int currentHitX)
         {
@@ -110,26 +114,26 @@ namespace EbaucheBN.Classes
         {
             if ((cell.cellIndex - 1) % GameDesign.GridSizeX > 0)
             {
-                if (!grid.getCell(cell.X, cell.Y - 1).HitYet)
-                    potentialShipPosition.Add(grid.getCell(cell.X, cell.Y - 1));
+                if (!allyGrid.getCell(cell.X, cell.Y - 1).HitYet)
+                    potentialShipPosition.Add(allyGrid.getCell(cell.X, cell.Y - 1));
             }
 
             if (cell.cellIndex % GameDesign.GridSizeX > 0)
             {
-                if (!grid.getCell(cell.X, cell.Y + 1).HitYet)
-                    potentialShipPosition.Add(grid.getCell(cell.X, cell.Y + 1));
+                if (!allyGrid.getCell(cell.X, cell.Y + 1).HitYet)
+                    potentialShipPosition.Add(allyGrid.getCell(cell.X, cell.Y + 1));
             }
 
             if (cell.cellIndex > GameDesign.GridSizeX)
             {
-                if (!grid.getCell(cell.X - 1, cell.Y).HitYet)
-                    potentialShipPosition.Add(grid.getCell(cell.X - 1, cell.Y));
+                if (!allyGrid.getCell(cell.X - 1, cell.Y).HitYet)
+                    potentialShipPosition.Add(allyGrid.getCell(cell.X - 1, cell.Y));
             }
 
             if (cell.cellIndex <= GameDesign.GridSizeX * (GameDesign.GridSizeY - 1))
             {
-                if (!grid.getCell(cell.X + 1, cell.Y).HitYet)
-                    potentialShipPosition.Add(grid.getCell(cell.X + 1, cell.Y));
+                if (!allyGrid.getCell(cell.X + 1, cell.Y).HitYet)
+                    potentialShipPosition.Add(allyGrid.getCell(cell.X + 1, cell.Y));
             }
         }
         private int GetOffSet()

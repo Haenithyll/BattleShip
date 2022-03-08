@@ -85,7 +85,6 @@ namespace EbaucheBN
         {
             return ShipSetupSelectionUI;
         }
-
         public Grid GetAllyGrid()
         {
             return allyGrid;
@@ -93,6 +92,10 @@ namespace EbaucheBN
         public BattleShipGrid GetAllyBSGrid()
         {
             return AllyBattleShipGrid;
+        }
+        public BattleShipGrid GetEnemyBSGrid()
+        {
+            return EnemyBattleShipGrid;
         }
         public Grid GetEnemyGrid()
         {

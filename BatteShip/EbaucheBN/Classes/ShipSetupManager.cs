@@ -36,17 +36,21 @@ namespace EbaucheBN.Classes
             InitializeInstructionText();
             InitializeShipSelection();
         }
-
         void InitializeInstructionText()
         {
+            Button ShipSelectionButton = new Button();
+
             ShipSelectionText.Text = "Select a ship to set its coordinates";
             ShipSelectionText.Foreground = new SolidColorBrush(Colors.White);
-            ShipSelectionText.FontSize = 32;
-            ShipSelectionText.HorizontalAlignment = HorizontalAlignment.Left;
+            ShipSelectionText.FontSize = UI.Width / ShipSelectionText.ToString().Length;
 
-            UI.Children.Add(ShipSelectionText);
+            ShipSelectionButton.Width = UI.Width;
+            ShipSelectionButton.Height = UI.Height;
+            ShipSelectionButton.Content = ShipSelectionText;
+            ShipSelectionButton.IsEnabled = false;
+
+            UI.Children.Add(ShipSelectionButton);
         }
-
         void InitializeShipSelection()
         {
             for (int ColumnAmount = 0; ColumnAmount < GameDesign.MaxSize + 2; ColumnAmount++)
@@ -64,7 +68,6 @@ namespace EbaucheBN.Classes
 
             startGameButton = new StartGameButton(SelectionUI);
         }
-
         public void GetAllyShipCoordinates()
         {
             foreach (ShipSelection shipSelection in buttons)
@@ -72,7 +75,6 @@ namespace EbaucheBN.Classes
                 shipSelection.ship.Position.AddRange(shipSelection.ShipCells);
             }
         }
-
         public void ChangeAllyShipsColor()
         {
             foreach (Ship allyShip in MainPage.Instance.allyShips)
@@ -81,7 +83,6 @@ namespace EbaucheBN.Classes
                     cell.cellButton.Background = new SolidColorBrush(Colors.BlueViolet);
             }
         }
-
         public void Click(ShipSelection ButtonClicked)
         {
             ShipSelectionText.Text = "Now Click on the grid to select the ship's coordinates";
@@ -89,7 +90,6 @@ namespace EbaucheBN.Classes
             UpdateButtonColor(ButtonClicked);
             StartCoordinateSelection(ButtonClicked);
         }
-
         public void UpdateButtonColor(ShipSelection ButtonClicked)
         {
             foreach (ShipSelection Button in buttons)
@@ -100,24 +100,22 @@ namespace EbaucheBN.Classes
                     Button.ShipButton.Background = new SolidColorBrush(GameDesign.ShipSelectColor);
             }
         }
-
         public void StartCoordinateSelection(ShipSelection ButtonClicked)
         {
             MainPage.Instance.Selection = true;
             CurrentShip = ButtonClicked;
         }
-
         public void ResetCurrentBoatSelection()
         {
-            if(CurrentShipCells.Count > 0)
+            if (CurrentShipCells.Count > 0)
             {
-                foreach(Cell cell in CurrentShipCells)
+                foreach (Cell cell in CurrentShipCells)
                 {
                     ShipCells.Remove(cell);
                     cell.cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
                 }
 
-                foreach(Coordinate coord in CurrentShip.Coordinates)
+                foreach (Coordinate coord in CurrentShip.Coordinates)
                 {
                     coord.TextBlock.Text = string.Empty;
                 }
@@ -125,7 +123,6 @@ namespace EbaucheBN.Classes
                 CurrentShipCells.Clear();
             }
         }
-
         public void ProceedShipSetup(Cell CellClicked)
         {
             if (!ShipCells.Contains(CellClicked))
@@ -182,7 +179,6 @@ namespace EbaucheBN.Classes
                 }
             }
         }
-
         private void TestSelectionComplete()
         {
             if (ShipCells.Count == GameDesign.TotalSize)
@@ -192,7 +188,6 @@ namespace EbaucheBN.Classes
                 startGameButton.textBlock.Foreground = new SolidColorBrush(Colors.White);
             }
         }
-
         private bool VerifyCoordinates()
         {
             int difference = CurrentShipCells[1].cellIndex - CurrentShipCells[0].cellIndex;
@@ -210,7 +205,6 @@ namespace EbaucheBN.Classes
 
             return true;
         }
-
         private static int CompareCellsByCoordinate(Cell cell1, Cell cell2)
         {
             if (cell1 == null)

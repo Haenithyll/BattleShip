@@ -13,6 +13,8 @@ namespace EbaucheBN.Classes
         private AI enemyAI = new AI();
         public bool AItoPlay = new bool();
 
+        private int currentHitCounter = new int();
+
         public void Initialize()
         {
             AItoPlay = false;
@@ -21,9 +23,8 @@ namespace EbaucheBN.Classes
         }
         public void Hit(Cell cellHit)
         {
-            AItoPlay = AItoPlay ? false : true;
-            foreach (Cell cell in enemyAI.potentialShipPosition)
-                cell.cellButton.Background = new SolidColorBrush(Colors.Black);
+
+            ManagePlayerTurn();
 
             cellHit.HitYet = true;
             cellHit.cellButton.Background = new SolidColorBrush(cellHit.typeOfCell == cellType.Water ? GameDesign.WaterColor : TestNotSunk(cellHit));
@@ -86,6 +87,15 @@ namespace EbaucheBN.Classes
 
             enemyAI.UpdatePotentialShipPosition();
             MainPage.Instance.allyShips.Remove(ship);
+        }
+        private void ManagePlayerTurn()
+        {
+            currentHitCounter++;
+            if (currentHitCounter == GameDesign.HitPerTurn)
+            {
+                currentHitCounter = 0;
+                AItoPlay = AItoPlay ? false : true;
+            }
         }
     }
 }

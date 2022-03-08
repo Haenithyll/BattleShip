@@ -22,7 +22,6 @@ namespace EbaucheBN.Classes
         Water,
         Ship
     }
-
     public class Cell
     {
         public string cellCoordinate;

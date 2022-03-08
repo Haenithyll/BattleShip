@@ -13,6 +13,8 @@ namespace EbaucheBN.Classes
         public const int GridSizeX = 13;
         public const int GridSizeY = 13;
 
+        public const int HitPerTurn = 1;
+
         public static Ship Fregate = new Ship("Fregate", 2);
         public static Ship Scout = new Ship("Scout", 3);
         public static Ship Submarine = new Ship("Submarine", 3);
@@ -21,9 +23,9 @@ namespace EbaucheBN.Classes
 
         public static readonly HashSet<Ship> ShipList = new HashSet<Ship>()
         {
-            //Fregate,
-            //Scout,
-            //Submarine,
+            Fregate,
+            Scout,
+            Submarine,
             Destroyer,
             PlaneCarrier
         };
@@ -34,7 +36,7 @@ namespace EbaucheBN.Classes
         public static Windows.UI.Color ShipColor = Colors.DarkOrange;
         public static Windows.UI.Color ShipHitColor = Colors.Red;
         public static Windows.UI.Color ShipSunkColor = Colors.DarkRed;
-        public static Windows.UI.Color WaterColor = Colors.CadetBlue;
+        public static Windows.UI.Color WaterColor = Colors.RoyalBlue;
         public static Windows.UI.Color ShipSelectColor = Colors.MediumPurple;
         public static Windows.UI.Color CellSelectColor = Colors.MediumPurple;
         public static Windows.UI.Color ShipCoordColor = Colors.Orange;
