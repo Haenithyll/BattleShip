@@ -124,6 +124,7 @@
     <Compile Include="Classes\BattleShipGrid.cs" />
     <Compile Include="Classes\Cell.cs" />
     <Compile Include="Classes\Coordinate.cs" />
+    <Compile Include="Classes\EndGameButton.cs" />
     <Compile Include="Classes\GameDesign.cs" />
     <Compile Include="Classes\GameManager.cs" />
     <Compile Include="Classes\GridManager.cs" />

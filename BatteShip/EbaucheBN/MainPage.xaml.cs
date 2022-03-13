@@ -18,18 +18,19 @@ namespace EbaucheBN
     {
         public static MainPage Instance;
 
-        public BattleShipGrid AllyBattleShipGrid = new BattleShipGrid();
         public BattleShipGrid EnemyBattleShipGrid = new BattleShipGrid();
+        public BattleShipGrid AllyBattleShipGrid = new BattleShipGrid();
         public ShipSetupManager shipSetupManager = new ShipSetupManager();
 
         public GameManager myGameManager = new GameManager();
-        
+
         GridManager myGridManager = new GridManager();
         MenuManager myMenuManager = new MenuManager();
 
-        public HashSet<Ship> allyShips = new HashSet<Ship>();
+        public List<Ship> allyShips = new List<Ship>();
 
         public bool GameStarted = false;
+        public bool GameOver = false;
 
         public bool Selection = false;
 
@@ -50,16 +51,8 @@ namespace EbaucheBN
         {
             if (Selection && CellClicked.Ally)
                 shipSetupManager.ProceedShipSetup(CellClicked);
-            else if (!CellClicked.Ally && !myGameManager.AItoPlay && !CellClicked.HitYet)
-            {
+            else if (!CellClicked.Ally && !myGameManager.AItoPlay && !CellClicked.HitYet && !GameOver)
                 myGameManager.Hit(CellClicked, false);
-            }
-            else
-            {
-                TextBlock textBlock = new TextBlock();
-                textBlock.Text = CellClicked.cellIndex.ToString();
-                CellClicked.cellButton.Content = textBlock;
-            }
         }
         public void StartGame()
         {
@@ -70,8 +63,38 @@ namespace EbaucheBN
             ShipSetupSelectionUI.Children.Clear();
 
             GridInitialization(EnemyBattleShipGrid, false);
- 
+
             myGameManager.Initialize();
+        }
+        public void StartNewGame()
+        {
+            ResetGrid(InGameUI);
+            ResetGrid(allyGrid);
+            ResetGrid(enemyGrid);
+            ResetGrid(MenuUI);
+            ResetGrid(ShipSetupSelectionUI);
+            ResetGrid(ShipSetupUI);
+
+            GameStarted = false;
+            Selection = false;
+            GameOver = false;
+
+            allyShips.Clear();
+
+            EnemyBattleShipGrid = new BattleShipGrid();
+            AllyBattleShipGrid = new BattleShipGrid();
+            shipSetupManager = new ShipSetupManager();
+            myGameManager = new GameManager();
+            myGridManager = new GridManager();
+            myMenuManager = new MenuManager();
+
+            myMenuManager.Initialize(MenuUI);
+        }
+        private void ResetGrid(Grid grid)
+        {
+            grid.Children.Clear();
+            grid.RowDefinitions.Clear();
+            grid.ColumnDefinitions.Clear();
         }
         public Grid GetShipSetupUI()
         {

@@ -36,7 +36,7 @@ namespace EbaucheBN.Classes
             InitializeInstructionText();
             InitializeShipSelection();
         }
-        void InitializeInstructionText()
+        private void InitializeInstructionText()
         {
             Button ShipSelectionButton = new Button();
 
@@ -51,7 +51,7 @@ namespace EbaucheBN.Classes
 
             UI.Children.Add(ShipSelectionButton);
         }
-        void InitializeShipSelection()
+        private void InitializeShipSelection()
         {
             for (int ColumnAmount = 0; ColumnAmount < GameDesign.MaxSize + 2; ColumnAmount++)
             {
@@ -80,7 +80,7 @@ namespace EbaucheBN.Classes
             foreach (Ship allyShip in MainPage.Instance.allyShips)
             {
                 foreach (Cell cell in allyShip.Position)
-                    cell.cellButton.Background = new SolidColorBrush(Colors.BlueViolet);
+                    cell.cellButton.Background = new SolidColorBrush(GameDesign.InGameShipColor);
             }
         }
         public void Click(ShipSelection ButtonClicked)
@@ -183,7 +183,7 @@ namespace EbaucheBN.Classes
         {
             if (ShipCells.Count == GameDesign.TotalSize)
             {
-                ShipSelectionText.Text = "Press Start Game to play !";
+                ShipSelectionText.Text = "Press Play Game to play !";
                 startGameButton.button.IsEnabled = true;
                 startGameButton.textBlock.Foreground = new SolidColorBrush(Colors.White);
             }

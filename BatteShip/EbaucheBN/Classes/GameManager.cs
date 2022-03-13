@@ -21,12 +21,14 @@ namespace EbaucheBN.Classes
         public List<Cell> AIShipCellHits = new List<Cell>();
         public List<Cell> PlayerShipCellHits = new List<Cell>();
 
+        private List<TextBlock> ShipCount = new List<TextBlock>();
+
         public void Initialize()
         {
             AItoPlay = false;
             enemyAI.Initialize();
 
-            PlayerShips.AddRange(MainPage.Instance.allyShips);
+            PlayerShips = MainPage.Instance.allyShips;
             AIShips.AddRange(enemyAI.AIShips);
 
             UpdateAIShipCellType();
@@ -51,6 +53,9 @@ namespace EbaucheBN.Classes
                 TextBlock UITextBlock = new TextBlock();
                 UITextBlock.FontSize = rowIndex % 2 == 0 ? 26 : 32;
                 UITextBlock.Foreground = new SolidColorBrush(Colors.Black);
+
+                if (rowIndex % 2 == 1)
+                    ShipCount.Add(UITextBlock);
 
                 switch (rowIndex)
                 {
@@ -149,6 +154,31 @@ namespace EbaucheBN.Classes
             }
 
             shipToRemove.Remove(shipToSink);
+            UpdateUI(AI);
+            TestGameOver();
+        }
+        private void TestGameOver()
+        {
+            if(AIShips.Count == 0 || PlayerShips.Count == 0)
+            {
+                UI.Children.Clear();
+
+                EndGameButton GameOver = new EndGameButton(UI, 0, "Game Over", false);
+                EndGameButton YouWinLose = new EndGameButton(UI, 1, AIShips.Count == 0 ? "You Win !" : "You Lose !", false);
+                EndGameButton BackToMenu = new EndGameButton(UI, 3, "Exit Game", true);
+
+                MainPage.Instance.GameOver = true;
+            }
+        }
+        private void UpdateUI(bool AI)
+        {
+            TextBlock newTextBlock = new TextBlock();
+            newTextBlock.FontSize = 32;
+            newTextBlock.Foreground = new SolidColorBrush(Colors.Black);
+
+            newTextBlock.Text = AI ? PlayerShips.Count.ToString() : AIShips.Count.ToString();
+
+            ShipCount[AI ? 0 : 1].Text = newTextBlock.Text;
         }
         private void UpdatePlayerShipCellType()
         {
@@ -175,11 +205,11 @@ namespace EbaucheBN.Classes
                 AItoPlay = AItoPlay ? false : true;
             }
         }
-        public void AppendPlayerCellHit(Cell cellHit)
+        private void AppendPlayerCellHit(Cell cellHit)
         {
             PlayerShipCellHits.Add(cellHit);
         }
-        public void AppendAICellHit(Cell cellHit)
+        private void AppendAICellHit(Cell cellHit)
         {
             AIShipCellHits.Add(cellHit);
         }
