@@ -17,6 +17,8 @@
         <Grid Name="MenuUI" Height="297" Width="357" Canvas.Left="782" Canvas.Top="477"/>
         <Grid Name="allyGrid" Height="700" Width="700" Canvas.Left="90" Canvas.Top="190"/>
         <Grid Name="enemyGrid" Height="700" Width="700" Canvas.Left="1144" Canvas.Top="190"/>
+        <Grid Name="InGameUI" Height="499" Width="344" Canvas.Left="795" Canvas.Top="324"/>
+        <Grid Name="TestGrid" Height="124" Width="415"/>
         <Canvas.Background>
             <ImageBrush ImageSource="Visuals/Test4.jpg" Stretch="UniformToFill"/>
         </Canvas.Background>

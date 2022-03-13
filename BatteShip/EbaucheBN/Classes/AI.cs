@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace EbaucheBN.Classes
 {
@@ -10,44 +12,32 @@ namespace EbaucheBN.Classes
         private AIShipSetupManager myAIshipSetupManager = new AIShipSetupManager();
 
         public List<Cell> potentialShipPosition = new List<Cell>();
-        public List<Cell> shipCellHits = new List<Cell>();
+
+        public List<Ship> AIShips = new List<Ship>();
 
         private int HitX = new int();
         private int HitY = new int();
         private int ShipOffSet = new int();
         private int TestOffSet = new int();
 
-        private int CurrentAllyShipCount = GameDesign.ShipCount;
-        private int CurrentEnemyShipCount = GameDesign.ShipCount;
-
         public void Initialize()
         {
             allyGrid = MainPage.Instance.GetAllyBSGrid();
             enemyGrid = MainPage.Instance.GetEnemyBSGrid();
-            myAIshipSetupManager.SetupAIShips(enemyGrid);
+            AIShips.AddRange(myAIshipSetupManager.SetupAIShips(enemyGrid));
         }
-        public void AIHit()
+        public void AIHit(List<Cell> PlayerShipCellHits)
         {
-            Cell currentCellHit = null;
+            Cell currentCellHit;
 
-            if (shipCellHits.Count >= 2)
-                currentCellHit = FinishShip();
-            else if (shipCellHits.Count > 0)
+            if (PlayerShipCellHits.Count >= 2)
+                currentCellHit = FinishShip(PlayerShipCellHits);
+            else if (PlayerShipCellHits.Count > 0)
                 currentCellHit = HitPotentialPosition();
             else
                 currentCellHit = RandomHit();
 
-            currentCellHit.HitYet = true;
-
-            if (currentCellHit.typeOfCell == cellType.Ship)
-            {
-                shipCellHits.Add(currentCellHit);
-
-                if (!MainPage.Instance.myGameManager.VerifyShipSunk(false))
-                    AddPotentialShipPosition(currentCellHit);
-            }
-
-            MainPage.Instance.myGameManager.Hit(currentCellHit);
+            MainPage.Instance.myGameManager.Hit(currentCellHit, true);
         }
         private Cell HitPotentialPosition()
         {
@@ -55,13 +45,13 @@ namespace EbaucheBN.Classes
             potentialShipPosition.RemoveAt(0);
             return cellToReturn;
         }
-        private Cell FinishShip()
+        private Cell FinishShip(List<Cell> PlayerShipCellHits)
         {
-            ShipOffSet = GetOffSet();
+            ShipOffSet = GetOffSet(PlayerShipCellHits);
 
             foreach (Cell potentialCell in potentialShipPosition)
             {
-                foreach (Cell HitCell in shipCellHits)
+                foreach (Cell HitCell in PlayerShipCellHits)
                 {
                     TestOffSet = Math.Abs(HitCell.cellIndex - potentialCell.cellIndex);
                     if (TestOffSet == ShipOffSet)
@@ -74,7 +64,7 @@ namespace EbaucheBN.Classes
 
             return HitPotentialPosition();
         }
-        public Cell RandomHit()
+        private Cell RandomHit()
         {
             Random Hit = new Random();
 
@@ -101,16 +91,16 @@ namespace EbaucheBN.Classes
                     return (2 * Hit.Next(0, (GameDesign.GridSizeX - 1) / 2) + 1);
             }
         }
-        public void UpdatePotentialShipPosition()
+        public void UpdatePotentialShipPosition(List<Cell> PlayerShipCellHits)
         {
             potentialShipPosition.Clear();
 
-            foreach (Cell cell in shipCellHits)
+            foreach (Cell cell in PlayerShipCellHits)
             {
                 AddPotentialShipPosition(cell);
             }
         }
-        private void AddPotentialShipPosition(Cell cell)
+        public void AddPotentialShipPosition(Cell cell)
         {
             if ((cell.cellIndex - 1) % GameDesign.GridSizeX > 0)
             {
@@ -136,9 +126,10 @@ namespace EbaucheBN.Classes
                     potentialShipPosition.Add(allyGrid.getCell(cell.X + 1, cell.Y));
             }
         }
-        private int GetOffSet()
+        private int GetOffSet(List<Cell> PlayerShipCellHits)
         {
-            return Math.Abs(shipCellHits[shipCellHits.Count - 2].cellIndex - shipCellHits[shipCellHits.Count - 1].cellIndex);
+            return Math.Abs(PlayerShipCellHits[PlayerShipCellHits.Count - 2].cellIndex - PlayerShipCellHits[PlayerShipCellHits.Count - 1].cellIndex);
+
         }
     }
 }

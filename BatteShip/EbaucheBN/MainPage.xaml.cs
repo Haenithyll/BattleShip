@@ -40,21 +40,19 @@ namespace EbaucheBN
             this.InitializeComponent();
             myMenuManager.Initialize(MenuUI);
         }
-
         public void GridInitialization(BattleShipGrid BSGridToInitialize, bool Ally)
         {
             BSGridToInitialize.initGrid(Ally);
 
             myGridManager.Setup(Ally ? allyGrid : enemyGrid, BSGridToInitialize, Ally);
         }
-
         public void Click(Cell CellClicked)
         {
             if (Selection && CellClicked.Ally)
                 shipSetupManager.ProceedShipSetup(CellClicked);
-            else if (!CellClicked.Ally && !myGameManager.AItoPlay)
+            else if (!CellClicked.Ally && !myGameManager.AItoPlay && !CellClicked.HitYet)
             {
-                myGameManager.Hit(CellClicked);
+                myGameManager.Hit(CellClicked, false);
             }
             else
             {
@@ -63,7 +61,6 @@ namespace EbaucheBN
                 CellClicked.cellButton.Content = textBlock;
             }
         }
-
         public void StartGame()
         {
             shipSetupManager.GetAllyShipCoordinates();
@@ -76,7 +73,6 @@ namespace EbaucheBN
  
             myGameManager.Initialize();
         }
-
         public Grid GetShipSetupUI()
         {
             return ShipSetupUI;
@@ -85,9 +81,17 @@ namespace EbaucheBN
         {
             return ShipSetupSelectionUI;
         }
-        public Grid GetAllyGrid()
+        public Grid GetPlayerGrid()
         {
             return allyGrid;
+        }
+        public Grid GetTestGrid()
+        {
+            return TestGrid;
+        }
+        public Grid GetInGameUI()
+        {
+            return InGameUI;
         }
         public BattleShipGrid GetAllyBSGrid()
         {

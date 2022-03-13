@@ -69,13 +69,11 @@ namespace EbaucheBN.Classes
             ship = inputShip;
             MainPage.Instance.allyShips.Add(ship);
         }
-
         void OnClick(object sender, RoutedEventArgs e)
         {
             if(!Complete)
                 MainPage.Instance.shipSetupManager.Click(this);
         }
-
         public void ResetCoordinates()
         {
             ShipName.Foreground = new SolidColorBrush(Colors.Black);

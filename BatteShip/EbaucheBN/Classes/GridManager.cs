@@ -22,7 +22,7 @@ namespace EbaucheBN.Classes
         public void Setup(Grid CurrentGrid, BattleShipGrid CurrentBattleShipGrid, bool Ally)
         {
             bool initialized = false;
-            Grid UI = Ally ? MainPage.Instance.GetAllyGrid() : MainPage.Instance.GetEnemyGrid();
+            Grid UI = Ally ? MainPage.Instance.GetPlayerGrid() : MainPage.Instance.GetEnemyGrid();
 
             for (int i = 0; i <= GameDesign.GridSizeX; i++)
             {

@@ -36,15 +36,11 @@ namespace EbaucheBN.Classes
                 else
                     SetupNewAIShip(newShip, false);
 
-                foreach (var cell in shipCoordonates)
-                    cell.cellButton.Background = new SolidColorBrush(GameDesign.ShipSelectColor);
-
                 AppendNewShip(newShip);
             }
 
             return AIShipList;
         }
-
         private Ship InitializeNewShip(Ship ship)
         {
             return new Ship(ship.Name, ship.Size);
@@ -52,11 +48,8 @@ namespace EbaucheBN.Classes
         private void AppendNewShip(Ship ship)
         {
             ship.Position.AddRange(newShipCoordonates);
-
-            foreach (Cell cell in ship.Position)
-                cell.typeOfCell = cellType.Ship;
+            AIShipList.Add(ship);
         }
-
         private bool TestValidShipPosition()
         {
             foreach (Cell newShipCell in newShipCoordonates)
