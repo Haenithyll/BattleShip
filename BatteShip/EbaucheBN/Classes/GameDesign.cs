@@ -4,11 +4,12 @@ using Windows.UI;
 
 namespace EbaucheBN.Classes
 {
+    //This class' purpose is to set the overall settings of the game.
+    //It also allows graphic customization.
+
+    #region GameDesignClassDefinition
     internal class GameDesign
     {
-        //This class' purpose is to set the overall settings of the game.
-        //It also allows graphic customization.
-
         #region GridSizeSettings 
         //Sets GridSize - X lines ; Y columns
         public const int GridSizeX = 13;
@@ -78,4 +79,5 @@ namespace EbaucheBN.Classes
         public static Windows.UI.Color InGameShipColor = Colors.SlateBlue;
         #endregion
     }
+    #endregion
 }
