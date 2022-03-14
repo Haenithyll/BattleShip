@@ -12,7 +12,8 @@ namespace EbaucheBN
     public sealed partial class MainPage : Page
     {
         #region Variables
-        public static MainPage Instance;                                    //Definition of a static instance of the mainpage class necessary to set up a singleton.
+
+        public static MainPage Instance;
 
         public BattleShipGrid AIBattleShipGrid = new BattleShipGrid();      //Definition of the AI's BattleShipGrid. On this grid :
                                                                                     // - the AI will setup its ships at the beginning of the game.
@@ -46,7 +47,7 @@ namespace EbaucheBN
         #region Constructor
         public MainPage()
         {
-            Instance = this;                    //Sets the static instance to be this very object as to satisfy the requirements of the singleton pattern.
+            Instance = this;
 
             this.InitializeComponent();         //Initialization of every component necessary to operate scripts and xaml.
             myMenuManager.Initialize(MenuUI);   //Initialization of the Menu.
