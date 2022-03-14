@@ -40,7 +40,7 @@ namespace EbaucheBN.Classes
             AItoPlay = false;                                   //The player is the first to play.
             enemyAI.Initialize();                               //Proceed to initialize the AI.
 
-            PlayerShips = MainPage.Instance.allyShips;          //Retrieve the Player's Ships.
+            PlayerShips = MainPage.Instance.PlayerShips;          //Retrieve the Player's Ships.
             AIShips.AddRange(enemyAI.AIShips);                  //Retrieve the AI's Ships.
 
             UpdateAIShipCellType();                             //Update the AI's Ships CellType (=> every cellType is set to Ship)
@@ -204,7 +204,7 @@ namespace EbaucheBN.Classes
         #region CellType Update
         private void UpdatePlayerShipCellType()         //Updates the celltype of every player ship => sets to Ship. 
         {
-            foreach (Ship ship in MainPage.Instance.allyShips)  //For each player ship :
+            foreach (Ship ship in MainPage.Instance.PlayerShips)  //For each player ship :
             {
                 foreach (Cell cell in ship.Position)                    //For each cell position of this ship :
                     cell.typeOfCell = cellType.Ship;                            //The type of this cell is set to ship.

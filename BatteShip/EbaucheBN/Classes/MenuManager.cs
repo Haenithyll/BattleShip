@@ -24,7 +24,7 @@ namespace EbaucheBN.Classes
         public void StartGame()         //Proceeds to launch the game.
         {
             myMenuUI.Children.Clear();                                                          //Removes every child on the current Grid.
-            MainPage.Instance.GridInitialization(MainPage.Instance.AllyBattleShipGrid, true);   //Proceeds to initialize and display the ally grid.
+            MainPage.Instance.GridInitialization(MainPage.Instance.PlayerBattleShipGrid, true);   //Proceeds to initialize and display the ally grid.
             MainPage.Instance.shipSetupManager.Initialize();                                    //Launches the ship setup process.
         }
         #endregion

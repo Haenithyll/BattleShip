@@ -17,7 +17,7 @@ namespace EbaucheBN.Classes
                                                                                 //column only once for the first row as to avoid declaring unnecessary columns.
             
             
-            Grid UI = Ally ? MainPage.Instance.GetPlayerGrid() : MainPage.Instance.GetEnemyGrid();  //Retrieves either the player's grid or the AI's.
+            Grid UI = Ally ? MainPage.Instance.GetPlayerGrid() : MainPage.Instance.GetAIGrid();  //Retrieves either the player's grid or the AI's.
 
             for (int i = 0; i <= GameDesign.GridSizeX; i++)                      //For every row
             {

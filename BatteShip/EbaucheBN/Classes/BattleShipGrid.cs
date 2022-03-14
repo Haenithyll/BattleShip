@@ -17,7 +17,7 @@
                 {
                     grid[i, j] = new Cell(cellType.Water, Ally,                                       //Creates and appends a new cell at that specific couple of indexes.
                                 i, j, Ally ? MainPage.Instance.GetPlayerGrid() 
-                                        : MainPage.Instance.GetEnemyGrid());
+                                        : MainPage.Instance.GetAIGrid());
                 }
             }
         }

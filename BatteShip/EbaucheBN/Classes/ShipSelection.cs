@@ -67,43 +67,44 @@ namespace EbaucheBN.Classes
             }
 
             ship = inputShip;                                               //Sets the ship to the one sent as an input in the constructor.
-            MainPage.Instance.allyShips.Add(ship);                          //Adds the ship to the list of Player's ships on MainPage.
+            MainPage.Instance.PlayerShips.Add(ship);                          //Adds the ship to the list of Player's ships on MainPage.
         }
         #endregion
         #region Click Event
-        void OnClick(object sender, RoutedEventArgs e)          //If the selection is not complete, launch the ship position selection.
+        void OnClick(object sender, RoutedEventArgs e)          //If the selection is not complete, launches the ship position selection.
         {
             if(!Complete)
                 MainPage.Instance.shipSetupManager.Click(this);
         }
         #endregion
-        public void ResetCoordinates()
+        #region Coordinates Reset
+        public void ResetCoordinates()              //Proceeds to reset the current coordinates selection. 
         {
-            ShipName.Foreground = new SolidColorBrush(Colors.Black);
-            ShipButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
+            ShipName.Foreground = new SolidColorBrush(Colors.Black);                        //Sets the font color to black to contrast with the button's color.
+            ShipButton.Background = new SolidColorBrush(GameDesign.DefaultColor);           //Sets the background color of the button to the preset in GameDesign.
+            Complete = false;                                                               //Disables the complete bool to allow the user to select new ship positions.
 
-            foreach (Cell cell in ShipCells)
+            foreach (Cell cell in ShipCells)                                                //For each ship cell position in the list :
             {
-                Complete = false;
-
-                cell.cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);
-                MainPage.Instance.shipSetupManager.ShipCells.Remove(cell);
+                cell.cellButton.Background = new SolidColorBrush(GameDesign.DefaultColor);      //Sets the background color of the button to the preset in GameDesign.
+                MainPage.Instance.shipSetupManager.ShipCells.Remove(cell);                      //Allows the player to use the previous selected cells for future selection.
             }
 
-            foreach(Coordinate coord in Coordinates)
+            foreach(Coordinate coord in Coordinates)                                        //For each coordinates in the coord liste :
             {
-                coord.TextBlock.Text = string.Empty;
-                coord.Button.ClearValue(Button.BackgroundProperty);
+                coord.TextBlock.Text = string.Empty;                                            //Resets the content of the coordinates' textblock.
+                coord.Button.ClearValue(Button.BackgroundProperty);                             //Clears the button's background color.
             }
-            CurrentColor = GameDesign.DefaultColor;
+            CurrentColor = GameDesign.DefaultColor;                                         //Sets the current color to default since the ship has to be setup again.
 
-            reset.button.IsEnabled = false;
-            reset.button.Background = new SolidColorBrush(GameDesign.DefaultColor);
-            reset.textBlock.Foreground = new SolidColorBrush(Colors.Black);
+            reset.button.IsEnabled = false;                                                 //Disables the reset button since the selection isnt complete anymore.
+            reset.button.Background = new SolidColorBrush(GameDesign.DefaultColor);         //Sets the reset button background to default again.
+            reset.textBlock.Foreground = new SolidColorBrush(Colors.Black);                 //Sets the text color to black to contrast with the button's color.
 
-            ShipCells.Clear();
-            MainPage.Instance.CoordReset();
+            ShipCells.Clear();                                                              //Removes every cells from the list.
+            MainPage.Instance.CoordReset();                                                 //Proceeds to update the instruction text.
         }
+        #endregion
     }
     #endregion
 }
