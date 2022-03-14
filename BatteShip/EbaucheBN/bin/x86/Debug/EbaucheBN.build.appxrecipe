@@ -34,29 +34,8 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test2.jpg">
-      <PackagePath>Visuals\Test2.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test.jpg">
-      <PackagePath>Visuals\Test.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Ocean_BackGround.jpg">
-      <PackagePath>Visuals\Ocean_BackGround.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Background.jpg">
-      <PackagePath>Visuals\Background.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test3.jpg">
-      <PackagePath>Visuals\Test3.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test4.jpg">
-      <PackagePath>Visuals\Test4.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Title.jpg">
-      <PackagePath>Visuals\Title.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\cell.PNG">
-      <PackagePath>Visuals\cell.PNG</PackagePath>
+    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -88,8 +67,8 @@
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Title.png">
       <PackagePath>Visuals\Title.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test4.jpg">
+      <PackagePath>Visuals\Test4.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\EbaucheBN.xr.xml">
       <PackagePath>EbaucheBN.xr.xml</PackagePath>

@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
 using Windows.UI;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -64,9 +60,7 @@ namespace EbaucheBN.Classes
         public void GetAllyShipCoordinates()
         {
             foreach (ShipSelection shipSelection in buttons)
-            {
                 shipSelection.ship.Position.AddRange(shipSelection.ShipCells);
-            }
         }
         public void ChangeAllyShipsColor()
         {

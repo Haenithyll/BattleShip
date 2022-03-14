@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-13T22:33:31.390</Modified>
+      <Modified>2022-03-14T02:56:29.577</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\EbaucheBN.exe">
       <PackagePath>entrypoint\EbaucheBN.exe</PackagePath>
-      <Modified>2022-03-13T22:33:30.799</Modified>
+      <Modified>2022-03-14T02:56:28.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,37 +46,9 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T03:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test2.jpg">
-      <PackagePath>Visuals\Test2.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.531</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test.jpg">
-      <PackagePath>Visuals\Test.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.530</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Ocean_BackGround.jpg">
-      <PackagePath>Visuals\Ocean_BackGround.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.528</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Background.jpg">
-      <PackagePath>Visuals\Background.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.525</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test3.jpg">
-      <PackagePath>Visuals\Test3.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.538</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test4.jpg">
-      <PackagePath>Visuals\Test4.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.542</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Title.jpg">
-      <PackagePath>Visuals\Title.jpg</PackagePath>
-      <Modified>2022-02-21T12:30:04.543</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\cell.PNG">
-      <PackagePath>Visuals\cell.PNG</PackagePath>
-      <Modified>2022-02-21T12:30:04.546</Modified>
+    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2022-02-21T12:30:04.524</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -116,9 +88,9 @@
       <PackagePath>Visuals\Title.png</PackagePath>
       <Modified>2022-02-21T12:30:04.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-02-21T12:30:04.524</Modified>
+    <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\Visuals\Test4.jpg">
+      <PackagePath>Visuals\Test4.jpg</PackagePath>
+      <Modified>2022-02-21T12:30:04.542</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\EbaucheBN.xr.xml">
       <PackagePath>EbaucheBN.xr.xml</PackagePath>
@@ -126,11 +98,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-13T22:33:30.729</Modified>
+      <Modified>2022-03-14T02:56:28.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-13T22:33:30.729</Modified>
+      <Modified>2022-03-14T02:56:28.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -138,11 +110,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-13T17:29:53.656</Modified>
+      <Modified>2022-03-14T02:56:28.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\paul_\Documents\GitHub\BattleShip\BatteShip\EbaucheBN\bin\x86\Debug\Core\EbaucheBN.exe">
       <PackagePath>EbaucheBN.exe</PackagePath>
-      <Modified>2022-03-13T22:33:31.385</Modified>
+      <Modified>2022-03-14T02:56:29.563</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

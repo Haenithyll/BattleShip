@@ -147,11 +147,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Visuals\Test2.jpg" />
-    <Content Include="Visuals\Test.jpg" />
-    <Content Include="Visuals\Ocean_BackGround.jpg" />
-    <Content Include="Visuals\cell.PNG" />
-    <Content Include="Visuals\Background.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -160,9 +155,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="Visuals\Test3.jpg" />
     <Content Include="Visuals\Test4.jpg" />
-    <Content Include="Visuals\Title.jpg" />
     <Content Include="Visuals\Title.png" />
   </ItemGroup>
   <ItemGroup>
