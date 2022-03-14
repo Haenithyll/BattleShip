@@ -119,26 +119,26 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\AI.cs" />
-    <Compile Include="Classes\AIShipSetupManager.cs" />
-    <Compile Include="Classes\BattleShipGrid.cs" />
-    <Compile Include="Classes\Cell.cs" />
-    <Compile Include="Classes\Coordinate.cs" />
-    <Compile Include="Classes\EndGameButton.cs" />
-    <Compile Include="Classes\GameDesign.cs" />
-    <Compile Include="Classes\GameManager.cs" />
-    <Compile Include="Classes\GridManager.cs" />
-    <Compile Include="Classes\Index.cs" />
-    <Compile Include="Classes\MenuButton.cs" />
-    <Compile Include="Classes\ResetButton.cs" />
-    <Compile Include="Classes\Ship.cs" />
-    <Compile Include="Classes\ShipSelection.cs" />
-    <Compile Include="Classes\ShipSetupManager.cs" />
-    <Compile Include="Classes\StartGameButton.cs" />
+    <Compile Include="Classes\AI\AI.cs" />
+    <Compile Include="Classes\AI\AIShipSetupManager.cs" />
+    <Compile Include="Classes\Grids\BattleShipGrid.cs" />
+    <Compile Include="Classes\Grids\Cell.cs" />
+    <Compile Include="Classes\ShipSetup\Coordinate.cs" />
+    <Compile Include="Classes\EndGame\EndGameButton.cs" />
+    <Compile Include="Classes\GameDesign\GameDesign.cs" />
+    <Compile Include="Classes\Game\GameManager.cs" />
+    <Compile Include="Classes\Grids\GridManager.cs" />
+    <Compile Include="Classes\Grids\Index.cs" />
+    <Compile Include="Classes\Menu\MenuButton.cs" />
+    <Compile Include="Classes\ShipSetup\ResetButton.cs" />
+    <Compile Include="Classes\ShipSetup\Ship.cs" />
+    <Compile Include="Classes\ShipSetup\ShipSelection.cs" />
+    <Compile Include="Classes\ShipSetup\ShipSetupManager.cs" />
+    <Compile Include="Classes\ShipSetup\StartGameButton.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\MenuManager.cs" />
+    <Compile Include="Classes\Menu\MenuManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
